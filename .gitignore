@@ -10,3 +10,4 @@ venv.bak/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+scripts/*.csv
