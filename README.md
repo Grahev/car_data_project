@@ -35,7 +35,8 @@ To install the required packages, run the following command in the command promp
 
 We will scrape data on used cars from online platforms such as Craigslist, eBay Motors, and Autotrader using the requests and BeautifulSoup4 packages. The code for scraping data is located in the scrape_data.py file.
 
-The collected data will be saved to a CSV file named cars.csv.
+The collected data will be saved to a SQLite database named database.csv.
+Database location = scripts\crawlers\usedcarsni\database.db
 
 ### Data Cleaning
 
