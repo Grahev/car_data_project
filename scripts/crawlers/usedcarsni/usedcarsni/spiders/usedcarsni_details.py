@@ -21,7 +21,8 @@ class UsedcarsniDetailsSpider(scrapy.Spider):
 
         conn = sqlite3.connect('database.db')
         cursor = conn.cursor()
-        id_list = cursor.execute('''SELECT id FROM unique_ids WHERE date(datestamp) = date('now', '-1 day')''').fetchall()
+        # id_list = cursor.execute('''SELECT id FROM unique_ids WHERE date(datestamp) = date('now', '-1 day')''').fetchall()
+        id_list = cursor.execute('''SELECT id FROM unique_ids WHERE date(datestamp) = date('now')''').fetchall()
         print(id_list)
 
         for id in id_list:
