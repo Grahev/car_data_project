@@ -92,7 +92,10 @@ class UsedcarsniDetailsSpider(scrapy.Spider):
         item['year'] = ''
         item['title'] = title
         item['price'] = price
-        item['milage'] = tech_data['Mileage']
+        try:
+            item['milage'] = tech_data['Mileage']
+        except:
+            item['milage'] = 'N/A'
         item['transmission'] = tech_data['Transmission']
         item['fuel_type'] = tech_data['Fuel Type']
         item['body_style'] = tech_data['Body Style']
